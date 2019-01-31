@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+
+
 QT_BEGIN_NAMESPACE
 class QPushButton;
 class QLabel;
@@ -12,7 +14,7 @@ class DialogWindow : public QDialog{
    Q_OBJECT
 
 public:
-    DialogWindow(QWidget *parent = nullptr);
+    DialogWindow(QWidget *parent = nullptr,QString msgText = "Null");
 
 private:
     QPushButton *okButton;

@@ -5,6 +5,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 {
     EnterMsgWidget *eMsgW = new EnterMsgWidget;
+    connect(eMsgW,SIGNAL(exitApp()),this,SLOT(close()));
     setCentralWidget(eMsgW);
 }
 

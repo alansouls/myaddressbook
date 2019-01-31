@@ -16,6 +16,9 @@ public:
 private slots:
     void sendMsgToDialog();
 
+
+signals: void exitApp();
+
 private:
    QPushButton *sendButton;
    QLabel *typeMsgLabel;

@@ -1,13 +1,13 @@
 #include "entermsgwidget.h"
+#include "dialogwindow.h"
 
 #include <QtWidgets>
-
 EnterMsgWidget::EnterMsgWidget(QWidget *parent) : QWidget (parent){
     sendButton = new QPushButton("Send");
     msgLine = new QLineEdit;
     typeMsgLabel = new QLabel("Alexa This is Epic");
 
-    connect(sendButton, SIGNAL(QPushButton::clicked(parent)),this, SLOT(sendMsgToDialog()));
+    connect(sendButton, SIGNAL(clicked()),this, SLOT(sendMsgToDialog()));
 
     QGridLayout *gLayout = new QGridLayout;
     gLayout->addWidget(typeMsgLabel, 0, 0,Qt::AlignBottom);
@@ -18,5 +18,8 @@ EnterMsgWidget::EnterMsgWidget(QWidget *parent) : QWidget (parent){
 }
 
 slots void EnterMsgWidget::sendMsgToDialog(){
-    return;
+   DialogWindow *dWindow = new DialogWindow(nullptr,msgLine->text());
+   if(!dWindow->exec()){
+        emit exitApp();
+   }
 }
