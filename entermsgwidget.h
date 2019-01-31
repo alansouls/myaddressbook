@@ -11,13 +11,13 @@ class EnterMsgWidget : public QWidget{
     Q_OBJECT
 
 public:
-    EnterMsgWidget();
+    EnterMsgWidget(QWidget *parent = nullptr);
 
 private slots:
     void sendMsgToDialog();
 
 private:
-   QPushButton *send;
+   QPushButton *sendButton;
    QLabel *typeMsgLabel;
    QLineEdit *msgLine;
 };
