@@ -27,7 +27,8 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    entermsgwidget.cpp
+    entermsgwidget.cpp \
+    dialogwindow.cpp
 
 HEADERS += \
         mainwindow.h \

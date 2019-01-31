@@ -18,5 +18,5 @@ EnterMsgWidget::EnterMsgWidget(QWidget *parent) : QWidget (parent){
 }
 
 slots void EnterMsgWidget::sendMsgToDialog(){
-    return;
+    
 }
