@@ -8,18 +8,24 @@
 QT_BEGIN_NAMESPACE
 class QPushButton;
 class QLabel;
+class QLineEdit;
+class QTextEdit;
 QT_END_NAMESPACE
 class DialogWindow : public QDialog{
 
    Q_OBJECT
 
 public:
-    DialogWindow(QWidget *parent = nullptr,QString msgText = "Null");
+    DialogWindow(QWidget *parent = nullptr);
+    QLineEdit *nameBox;
+    QTextEdit *addressBox;
 
 private:
     QPushButton *okButton;
     QPushButton *denyButton;
-    QLabel *msgText;
+    QLabel *nameLabel;
+    QLabel *addressLabel;
+
 };
 
 #endif // DIALOGWINDOW_H

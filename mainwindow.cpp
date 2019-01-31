@@ -4,9 +4,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 
 {
-    EnterMsgWidget *eMsgW = new EnterMsgWidget;
-    connect(eMsgW,SIGNAL(exitApp()),this,SLOT(close()));
-    setCentralWidget(eMsgW);
+    DialogWindow *dwindow = new DialogWindow;
+    dwindow->exec();
 }
 
 MainWindow::~MainWindow()

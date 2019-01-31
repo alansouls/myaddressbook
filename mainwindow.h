@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "entermsgwidget.h"
+#include "dialogwindow.h"
 
 
 class MainWindow : public QMainWindow
