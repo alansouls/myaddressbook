@@ -71,8 +71,8 @@ slots void AddressWidget::addEntry(QString name, QString address){
         table->setData(index, address, Qt::EditRole);
         removeTab(indexOf(newAddressTab));
     } else {
-        QMessageBox::information(this, tr("Duplicate Name"),
-            tr("The name \"%1\" already exists.").arg(name));
+        QMessageBox::information(this, tr("Nome Existente"),
+            tr("O nome \"%1\" já existe.").arg(name));
     }
 }
 slots void AddressWidget::showAddEntryDialog(){
@@ -84,4 +84,25 @@ slots void AddressWidget::showAddEntryDialog(){
 
         addEntry(name,address);
     }
+}
+
+slots void AddressWidget::removeEntry(){
+    QTableView *temp = static_cast<QTableView*>(currentWidget());
+    QSortFilterProxyModel *proxy = static_cast<QSortFilterProxyModel*>(temp->model());
+    QItemSelectionModel *selectionModel = temp->selectionModel();
+
+    QModelIndexList indexes = selectionModel->selectedRows();
+
+    foreach (QModelIndex index, indexes) {
+        int row = proxy->mapToSource(index).row();
+        table->removeRows(row, 1, QModelIndex());
+    }
+
+    if (table->rowCount(QModelIndex()) == 0) {
+        insertTab(0, newAddressTab, "Address Book");
+    }
+}
+
+slots void AddressWidget::editEntry(){
+
 }

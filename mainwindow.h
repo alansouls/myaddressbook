@@ -18,8 +18,12 @@ public:
     QMenu *opMenu;
     AddressWidget *mainWidget;
 
+private slots :
+    void updateActions(const QItemSelection &selection);
 
-
+private:
+    QAction *editAction;
+    QAction *removeAction;
 };
 
 #endif // MAINWINDOW_H
