@@ -24,6 +24,8 @@ DialogWindow::DialogWindow(QWidget *parent) : QDialog (parent){
    mainLayout->addLayout(gLayout);
    setLayout(mainLayout);
 
+   setWindowTitle(tr("Adicionar um contato"));
+
    connect(okButton,SIGNAL(clicked()),this,SLOT(accept()));
    connect(denyButton,SIGNAL(clicked()),this,SLOT(reject()));
 }

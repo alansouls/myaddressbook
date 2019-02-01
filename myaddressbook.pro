@@ -27,13 +27,15 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    entermsgwidget.cpp \
-    dialogwindow.cpp
+    dialogwindow.cpp \
+    newaddresstab.cpp \
+    tablemodel.cpp
 
 HEADERS += \
         mainwindow.h \
     dialogwindow.h \
-    entermsgwidget.h
+    newaddresstab.h \
+    tablemodel.h
 
 FORMS += \
         mainwindow.ui

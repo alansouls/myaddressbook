@@ -13,7 +13,11 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private:
+    QMenuBar *menuBar;
+
+
+public slots:
+    void callDialogWindow();
 };
 
 #endif // MAINWINDOW_H
