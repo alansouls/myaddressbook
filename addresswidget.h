@@ -25,8 +25,8 @@ public:
 public slots:
     void showAddEntryDialog();
     void addEntry(QString name, QString address);
-    //void editEntry();
-    //void removeEntry();
+    void editEntry();
+    void removeEntry();
     void callDialogWindow();
 
 signals:
