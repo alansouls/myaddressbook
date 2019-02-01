@@ -29,13 +29,15 @@ SOURCES += \
         mainwindow.cpp \
     dialogwindow.cpp \
     newaddresstab.cpp \
-    tablemodel.cpp
+    tablemodel.cpp \
+    addresswidget.cpp
 
 HEADERS += \
         mainwindow.h \
     dialogwindow.h \
     newaddresstab.h \
-    tablemodel.h
+    tablemodel.h \
+    addresswidget.h
 
 FORMS += \
         mainwindow.ui
