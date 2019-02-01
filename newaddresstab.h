@@ -14,8 +14,10 @@ public:
     explicit NewAddressTab(QWidget *parent = nullptr);
 
 signals:
+    void sendDetails(QString name, QString address);
 
-
+public slots:
+    void addEntry();
 
 
 private:

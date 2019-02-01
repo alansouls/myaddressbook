@@ -1,4 +1,6 @@
 #include "newaddresstab.h"
+#include "addresswidget.h"
+#include "dialogwindow.h"
 
 #include<QtWidgets>
 
@@ -12,9 +14,20 @@ NewAddressTab::NewAddressTab(QWidget *parent) : QWidget(parent)
     vLayout->addWidget(msgText,0,Qt::AlignCenter|Qt::AlignBottom);
     vLayout->addWidget(addButton,0,Qt::AlignCenter|Qt::AlignTop);
 
-    connect(addButton,SIGNAL(clicked()),parent,SLOT(callDialogWindow()));
+    connect(addButton,SIGNAL(clicked()),this,SLOT(addEntry()));
 
     setLayout(vLayout);
+}
+
+slots void NewAddressTab::addEntry(){
+    DialogWindow dialogWin;
+
+    if(dialogWin.exec()){
+        QString name = dialogWin.nameBox->text();
+        QString address = dialogWin.addressBox->toPlainText();
+
+        emit sendDetails(name,address);
+    }
 }
 
 

@@ -23,13 +23,15 @@ public:
     void writeToFile(const QString &fileName);
 
 public slots:
-    void showAddEntryDialog();
+    //void showAddEntryDialog();
     void addEntry(QString name, QString address);
-    void editEntry();
-    void removeEntry();
+    //void editEntry();
+    //void removeEntry();
+    void callDialogWindow();
 
 signals:
     void selectionChanged (const QItemSelection &selected);
+    void calledDialog();
 
 private:
     void setupTabs();

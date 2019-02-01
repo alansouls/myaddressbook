@@ -16,8 +16,7 @@ public:
     QMenuBar *menuBar;
 
 
-public slots:
-    void callDialogWindow();
+
 };
 
 #endif // MAINWINDOW_H
