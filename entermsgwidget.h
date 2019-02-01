@@ -13,11 +13,9 @@ class EnterMsgWidget : public QWidget{
 public:
     EnterMsgWidget(QWidget *parent = nullptr);
 
-private slots:
-    void sendMsgToDialog();
 
 
-signals: void exitApp();
+
 
 private:
    QPushButton *sendButton;

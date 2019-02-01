@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "entermsgwidget.h"
+#include "dialogwindow.h"
+#include "addresswidget.h"
 
 
 class MainWindow : public QMainWindow
@@ -13,7 +14,12 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private:
+    void createMenus();
+    QMenu *opMenu;
+    AddressWidget *mainWidget;
+
+
+
 };
 
 #endif // MAINWINDOW_H
