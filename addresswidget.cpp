@@ -10,6 +10,7 @@ AddressWidget::AddressWidget(QWidget *parent): QTabWidget(parent)
     connect(newAddressTab, &NewAddressTab::sendDetails,
         this, &AddressWidget::addEntry);
 
+
     addTab(newAddressTab, "Address Book");
 
     setupTabs();
@@ -72,5 +73,15 @@ slots void AddressWidget::addEntry(QString name, QString address){
     } else {
         QMessageBox::information(this, tr("Duplicate Name"),
             tr("The name \"%1\" already exists.").arg(name));
+    }
+}
+slots void AddressWidget::showAddEntryDialog(){
+    DialogWindow dialogWin;
+
+    if(dialogWin.exec()){
+        QString name = dialogWin.nameBox->text();
+        QString address = dialogWin.addressBox->toPlainText();
+
+        addEntry(name,address);
     }
 }

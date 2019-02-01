@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "dialogwindow.h"
+#include "addresswidget.h"
 
 
 class MainWindow : public QMainWindow
@@ -15,6 +16,8 @@ public:
 
     void createMenus();
     QMenu *opMenu;
+    AddressWidget *mainWidget;
+
 
 
 };
