@@ -57,10 +57,10 @@ QVariant TableModel::headerData(int section, Qt::Orientation orientation, int ro
     if (orientation == Qt::Horizontal) {
         switch (section) {
             case 0:
-                return tr("Name");
+                return tr("Nome");
 
             case 1:
-                return tr("Address");
+                return tr("Endereço");
 
             default:
                 return QVariant();

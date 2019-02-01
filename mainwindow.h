@@ -13,8 +13,8 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    QMenuBar *menuBar;
-
+    void createMenus();
+    QMenu *opMenu;
 
 
 };
